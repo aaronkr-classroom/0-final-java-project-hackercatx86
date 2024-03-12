@@ -8,8 +8,8 @@ public class Welcome {
 		
 		System.out.println("*****************************************");
 		System.out.println("\t" + greeting);
-		System.out.println("*****************************************");
 		System.out.println("\t" + tagline);
+		System.out.println("*****************************************");
 		
 		System.out.println("1. 고객 정보 확인하기 \t5. 바구니에 항목 추가하기");
 		System.out.println("2. 장바구니 상풍 목록 보기 \t6. 장바구니의 항목 수량 줄이기");
