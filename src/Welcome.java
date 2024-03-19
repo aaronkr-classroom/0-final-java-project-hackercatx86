@@ -59,6 +59,7 @@ public class Welcome {
 						break;
 					case 8:
 						System.out.println("8. 종료");
+						quit = true;
 						break;
 				}
 			}
