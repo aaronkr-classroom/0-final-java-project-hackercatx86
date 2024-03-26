@@ -88,8 +88,8 @@ public class Welcome {
 		System.out.println("이름: " + name + "\n연락처: " + phone);
 	}
 	/**
-	 * Explanation: number 2
-	 * Parameter: x
+	 * Explanation: show item list
+	 * Parameter: string[][] book
 	 * Return value: x  
 	 */
 	public static void menuCartItemList(String[][] book) {		System.out.println("2.장바구니 상품 목록 보기");
