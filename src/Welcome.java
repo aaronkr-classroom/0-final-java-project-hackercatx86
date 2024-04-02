@@ -85,14 +85,13 @@ public class Welcome {
 	public static void menuCartItemList() {
 		System.out.println("------------------------------------------------");		System.out.println("2. 장바구니 상품 목록 보기");
 		System.out.println("------------------------------------------------");
-		System.out.println("	도서ID \t|	수량 \t|    합계");
-		for (int i = 0; i < mCartItem; i++) {
-			System.out.println("	" + mCartItem[i].getBookID() + "\t| ");
-			System.out.println("	" + mCartItem[i].getQuantity() + "\t| ");
-			System.out.println("	" + mCartItem[i].getTotalPrice());
-			System.out.println("	");
-		}
-		System.out.println("------------------------------------------------");	}
+		System.out.println("	도서ID \t|	수량 \t|	합계");
+		for (int i = 0; i < mCartCount; i++) {
+			System.out.print("    " + mCartItem[i].getBookID() + " \t| ");
+			System.out.print("    " + mCartItem[i].getQuantity() + " \t| ");
+			System.out.print("    " + mCartItem[i].getTotalPrice());
+			System.out.println(" ");
+		}	}
 	
 	public static void menuCartClear() {
 		System.out.println("------------------------------------------------");
@@ -171,7 +170,9 @@ public class Welcome {
 	
 	static final int NUM_ITEM = 7;
 	static final int NUM_BOOK = 3;
-
+	
+	static CartItem[] mCartItem = new CartItem[NUM_BOOK];
+	static int mCartCount = 0;
 	
 	public static void BookList(String[][] book) {	
 		book[0][0] = "ISBN1234";
@@ -200,12 +201,11 @@ public class Welcome {
 		book[2][6] = "2019/06/10";
 	}
 	
-	static CartItem[] mCartItem = new CartItem[NUM_BOOK];
-	static int mCartItem = 0;
+	
 	
 	public static boolean isCartInBook(String bookId) {
 		boolean flag = false;
-		for (int i = 0; i < mCartItem; i++) {
+		for (int i = 0; i < mCartCount; i++) {
 			if (bookId == mCartItem[i].getBookID()) {
 				mCartItem[i].setQuantity(mCartItem[i].getQuantity()+1);
 				flag = true;
