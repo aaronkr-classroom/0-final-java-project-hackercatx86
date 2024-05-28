@@ -11,7 +11,7 @@ public class GuestWindow extends JFrame {
 		setVisible(true);
 		setResizable(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setIconImage(new ImageIcon("img/shop.png").getImage());
+		setIconImage(new ImageIcon("images/user.png").getImage());
 	}
 	
 	private void initContainer(String title, int x, int y, int width, int height) {
@@ -30,7 +30,7 @@ public class GuestWindow extends JFrame {
 		ImageIcon imageIcon = new ImageIcon("");
 		imageIcon.setImage(imageIcon.getImage().getScaledInstance(160, 160, Image.SCALE_SMOOTH));
 		JLabel userLabel = new JLabel(imageIcon);
-		userLabel.add(userLabel);
+		userPanel.add(userLabel);
 		add(userLabel);
 		
 		JPanel titlePanel = new JPanel();
@@ -40,13 +40,13 @@ public class GuestWindow extends JFrame {
 		JLabel titleLabel = new JLabel("-- 고객 정보를 입력하세요 --");
 		titleLabel.setFont(ft);
 		titleLabel.setForeground(Color.BLUE);
-		titleLabel.add(titleLabel);
+		titlePanel.add(titleLabel);
 		
 		JPanel namePanel = new JPanel();
 		namePanel.setBounds(0, 400, 1000, 50);
 		add(namePanel);
 		
-		JLabel nameLabel = new JLabel("이  름 :");
+		JLabel nameLabel = new JLabel("이   름 :");
 		nameLabel.setFont(ft);
 		namePanel.add(nameLabel);
 		
@@ -70,7 +70,7 @@ public class GuestWindow extends JFrame {
 		buttonPanel.setBounds(0, 500, 1000, 100);
 		add(buttonPanel);
 		
-		JLabel buttonLabel = new JLabel("쇼핑하기", new ImageIcon("img/shop.png"), JLabel.LEFT);
+		JLabel buttonLabel = new JLabel("쇼핑하기", new ImageIcon("images/shop.png"), JLabel.LEFT);
 		buttonLabel.setFont(ft);
 		JButton enterButton = new JButton();
 		enterButton.add(buttonLabel);
